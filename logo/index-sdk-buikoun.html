@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SDK BUIKOUN - Kec. Laen Manen, Kab. Malaka</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <style>body { font-family: Poppins, sans-serif; }</style>
+</head>
+<body class="bg-slate-50">
+  <header class="bg-white shadow p-2 flex items-center gap-2">
+    <img src="logo-sdk.png" alt="Logo SDK BUIKOUN" class="w-12 h-12">
+    <div>
+      <h1 class="font-bold text-[13px] text-blue-900">SDK BUIKOUN KAB. MALAKA</h1>
+      <p class="text-[9px] text-slate-600">KEC. LAEN MANEN • NTT</p>
+    </div>
+  </header>
+
+  <section class="max-w-5xl mx-auto p-3">
+    <img src="header-3-logo.jpg" alt="SDK BUIKOUN" class="w-full rounded-2xl shadow border">
+    <div class="mt-6 bg-white rounded-2xl p-6 border">
+      <h2 class="font-bold text-center text-blue-900">PPDB ONLINE 2026/2027</h2>
+      <form id="f" class="grid gap-3 mt-4">
+        <input id="n" name="nama" required placeholder="Nama Lengkap Siswa" aria-label="Nama Lengkap Siswa" class="border p-3 rounded-xl text-sm">
+        <input id="o" name="ortu" required placeholder="Nama Orang Tua" aria-label="Nama Orang Tua" class="border p-3 rounded-xl text-sm">
+        <input id="a" name="alamat" required placeholder="Alamat - Desa Buikoun" aria-label="Alamat" class="border p-3 rounded-xl text-sm">
+        <input id="w" name="wa" type="tel" required placeholder="No WA Orang Tua" aria-label="Nomor WhatsApp Orang Tua" class="border p-3 rounded-xl text-sm">
+        <button type="submit" class="bg-green-600 text-white font-bold py-3 rounded-xl">KIRIM KE WA 082266138384</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('f').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nama = document.getElementById('n').value.trim();
+      const ortu = document.getElementById('o').value.trim();
+      const alamat = document.getElementById('a').value.trim();
+      const wa = document.getElementById('w').value.trim();
+
+      const pesan = `*PPDB SDK BUIKOUN - LAEN MANEN*\nNama: ${nama}\nOrtu: ${ortu}\nAlamat: ${alamat}\nWA: ${wa}`;
+      const url = 'https://wa.me/6282266138384?text=' + encodeURIComponent(pesan);
+      window.open(url, '_blank', 'noopener,noreferrer');
+    });
+  </script>
+</body>
+</html>
