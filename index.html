@@ -1,48 +1,38 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SDK BUIKOUN - Kec. Laen Manen, Kab. Malaka</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <style>body { font-family: Poppins, sans-serif; }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SDK BUIKOUN - Kec. Laen Manen, Kab. Malaka</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>body{font-family:Poppins,sans-serif}</style>
 </head>
 <body class="bg-slate-50">
-  <header class="bg-white shadow p-2 flex items-center gap-2">
-    <img src="logo-sdk.png" alt="Logo SDK BUIKOUN" class="w-12 h-12">
-    <div>
-      <h1 class="font-bold text-[13px] text-blue-900">SDK BUIKOUN KAB. MALAKA</h1>
-      <p class="text-[9px] text-slate-600">KEC. LAEN MANEN • NTT</p>
-    </div>
-  </header>
-
-  <section class="max-w-5xl mx-auto p-3">
-    <img src="header-3-logo.jpg" alt="SDK BUIKOUN" class="w-full rounded-2xl shadow border">
-    <div class="mt-6 bg-white rounded-2xl p-6 border">
-      <h2 class="font-bold text-center text-blue-900">PPDB ONLINE 2026/2027</h2>
-      <form id="f" class="grid gap-3 mt-4">
-        <input id="n" name="nama" required placeholder="Nama Lengkap Siswa" aria-label="Nama Lengkap Siswa" class="border p-3 rounded-xl text-sm">
-        <input id="o" name="ortu" required placeholder="Nama Orang Tua" aria-label="Nama Orang Tua" class="border p-3 rounded-xl text-sm">
-        <input id="a" name="alamat" required placeholder="Alamat - Desa Buikoun" aria-label="Alamat" class="border p-3 rounded-xl text-sm">
-        <input id="w" name="wa" type="tel" required placeholder="No WA Orang Tua" aria-label="Nomor WhatsApp Orang Tua" class="border p-3 rounded-xl text-sm">
-        <button type="submit" class="bg-green-600 text-white font-bold py-3 rounded-xl">KIRIM KE WA 082266138384</button>
-      </form>
-    </div>
-  </section>
-
-  <script>
-    document.getElementById('f').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const nama = document.getElementById('n').value.trim();
-      const ortu = document.getElementById('o').value.trim();
-      const alamat = document.getElementById('a').value.trim();
-      const wa = document.getElementById('w').value.trim();
-
-      const pesan = `*PPDB SDK BUIKOUN - LAEN MANEN*\nNama: ${nama}\nOrtu: ${ortu}\nAlamat: ${alamat}\nWA: ${wa}`;
-      const url = 'https://wa.me/6282266138384?text=' + encodeURIComponent(pesan);
-      window.open(url, '_blank', 'noopener,noreferrer');
-    });
-  </script>
-</body>
-</html>
+<header class="bg-white shadow p-3 flex items-center gap-3">
+<img src="logo/SDKBUIKOUN.png" class="w-12 h-12">
+<div><h1 class="font-bold text-blue-900 text-[13px]">SDK BUIKOUN</h1>
+<p class="text-[10px]">KEC. LAEN MANEN - KAB. MALAKA - NTT</p></div>
+</header>
+<section class="max-w-4xl mx-auto p-4">
+<div class="bg-white rounded-2xl border shadow overflow-hidden">
+<div class="bg-green-700 text-white text-center p-3 font-bold">SEKOLAH DASAR KATOLIK (SDK) BUIKOUN<br><span class="text-xs font-normal">KEC. LAEN MANEN KAB. MALAKA NTT</span></div>
+<div class="flex justify-around p-4 bg-white">
+<div class="text-center"><img src="logo/MALAKA.png" class="w-20 mx-auto"><p class="text-[9px] font-bold mt-1">KAB. MALAKA</p></div>
+<div class="text-center"><img src="logo/TUTWURIHANDAYANI.png" class="w-20 mx-auto"><p class="text-[9px] font-bold mt-1">TUT WURI HANDAYANI</p></div>
+<div class="text-center"><img src="logo/SDKBUIKOUN.png" class="w-20 mx-auto"><p class="text-[9px] font-bold mt-1">SDK BUIKOUN</p></div>
+</div></div>
+<div class="mt-6 bg-white rounded-2xl p-6 border shadow">
+<h2 class="font-bold text-center text-blue-900">PPDB ONLINE 2026/2027</h2>
+<form id="f" class="grid gap-3 mt-4">
+<input id="n" required placeholder="Nama Lengkap Siswa" class="border p-3 rounded-xl text-sm">
+<input id="o" required placeholder="Nama Orang Tua" class="border p-3 rounded-xl text-sm">
+<input id="a" required placeholder="Alamat - Desa Buikoun" class="border p-3 rounded-xl text-sm">
+<input id="w" required placeholder="No WA Orang Tua" class="border p-3 rounded-xl text-sm">
+<button class="bg-green-600 text-white font-bold py-3 rounded-xl">KIRIM KE WA 082266138384</button>
+</form></div>
+</section>
+<script>document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();
+let t=`*PPDB SDK BUIKOUN - LAEN MANEN*%0ANama: ${n.value}%0AOrtu: ${o.value}%0AAlamat: ${a.value}%0AWA: ${w.value}`;
+open('https://wa.me/6282266138384?text='+t,'_blank')})</script>
+</body></html>
